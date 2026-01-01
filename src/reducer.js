@@ -2,9 +2,9 @@ const initialState={nbre:0}
 export default function reducer(state=initialState,action){
     switch(action.type){
         case 'Incrementer':
-            return {...state,nbre:state.nbre+1}
+            return {...state,nbre:state.nbre+parseInt(action.playload)}
         case "Decrementer":
-            return {...state,nbre:state.nbre-1}
+            return {...state,nbre:state.nbre-parseInt(action.payload)}
         case "Reinitialiser":
             return {...state,nbre:0}
     }
