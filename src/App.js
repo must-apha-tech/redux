@@ -1,4 +1,5 @@
 import { useDispatch,useSelector } from 'react-redux';
+import { useState } from 'react';
 function App() {
   const nbre=useSelector(data=>data.nbre)
   const [inc,setInc]=useState("");
@@ -10,7 +11,7 @@ function App() {
     <p><button onClick={()=>dispatch({type:"Incrementer",
       payload:inc})}>Incrementer</button></p>
     <p><button onClick={()=>dispatch({type:"Decrementer", 
-      playload:inc})}>Decrementer</button></p>
+      payload:inc})}>Decrementer</button></p>
     <p><button onClick={()=>dispatch({type:"Reinitialiser"})}>Reinitialiser</button></p>
   </div>
   );
